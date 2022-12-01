@@ -14,10 +14,11 @@ const CalendarContainer = styled.div`
   /* 전체 */
   .react-calendar {
     margin: auto;
-    background-color: #FAF3FF;
+    background-color: white;
     padding: 3%;
-    border-radius: 3px;
-    border: 2px solid #F6E9FF;
+    border-radius: 10px;
+    border: 2px solid #black;
+    box-shadow : 5px 5px 5px gray;
   }
 
   /* 년 월 헤더바 */
@@ -51,8 +52,9 @@ const CalendarContainer = styled.div`
 
   /* 클릭 시 유지되는 색상 */
   button:enabled:hover {
-    background-color: #A92DFF;
+    background-color: black;
     color: white;
+    transition : all 0.4s;
   }
 
   /* 클릭 시 잠시 보이는 색상 */
@@ -216,9 +218,9 @@ function OtherUser() {
                 </button>
 
                 {userId===otherUser ? <span></span> : 
-                    <span>{isFollow ? <button className='followbtn' onClick={()=>unfollow(userId,otherUser)}>
+                    <span>{isFollow ? <button className="btn btn-primary btn-jelly" onClick={()=>unfollow(userId,otherUser)}>
                     언팔로우
-                    </button> : <button className='followbtn' onClick={()=>follow(userId,otherUser)}>
+                  </button> : <button className="btn btn-primary btn-jelly" onClick={()=>follow(userId,otherUser)}>
                     팔로우
                     </button>}</span>
                 }

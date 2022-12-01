@@ -71,7 +71,7 @@ router.post("/followCount", (req,res) => {
 
 router.post("/followingList", (req,res) => {
     database.query(
-        "select user_id,email from user inner join (select follower_id from follow where following_id=?) f on user.user_id=f.follower_id", [req.body.userId] ,
+        "select user_id,email,name,profile_img from user inner join (select follower_id from follow where following_id=?) f on user.user_id=f.follower_id", [req.body.userId] ,
         (err, result) => {
             if (err) throw err;
             //등록완료되면 success 1 반환
