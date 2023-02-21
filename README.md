@@ -10,9 +10,13 @@
 - Todo list를 카테고리별로 관리할 수 있어요.
 
 ## 📚 Tech
-- Html, css, React.js
+- Html, css, javascript, React.js
 - Node.js
 - MySQL
+
+## 🌎 Setting
+- Visual Code
+- MySQL Workbench
 
 ## 🖐 담당 업무
 > 회원 관리, 카테고리 관리 기능을 담당하였어요.
